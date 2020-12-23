@@ -119,6 +119,8 @@ namespace FinancialManager.Services
 
         public async Task ProcessCsvFile(string filePath, Dictionary<string, int> fieldsPattern)
         {
+            // use third party solutions to small files
+            // TODO: implement and substitute to FileReader to process larger files
             await Task.Run(() =>
             {
                 var csvBillMapping = new CsvBillMapping();
